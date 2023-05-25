@@ -42,6 +42,13 @@ public class TimelineBackground : Control
             double x = firstPointPos + i * 50;
             Point pos = new Point(x, this.Bounds.Height / 2 + pan.Y);
 
+            // Vertical lines on points
+            context.DrawLine(new Pen(Brushes.White, 1), new Point(x, 0), new Point(x, this.Bounds.Height));
+            // Year markers
+            context.DrawText(Brushes.White, new Point(x+3, this.Bounds.Height*3/4 + pan.Y), new FormattedText(
+                    (2020 + (x - this.Bounds.Width/2 - pan.X)/50).ToString(), Typeface.Default, 10, TextAlignment.Left, 
+                    TextWrapping.NoWrap, Size.Infinity));
+
             // Center point is slightly larger
             if (x - pan.X == this.Bounds.Width/2)
             {

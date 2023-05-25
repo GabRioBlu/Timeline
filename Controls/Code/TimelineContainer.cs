@@ -59,8 +59,8 @@ public class TimelineContainer : Panel
                 continue;
             }
 
-            child.RenderTransform = new TranslateTransform((child.RenderTransform != null ? child.RenderTransform.Value.M31 : 0) 
-                    + delta.X, (child.RenderTransform != null ? child.RenderTransform.Value.M32 : 0) + delta.Y);
+            child.RenderTransform = new TranslateTransform(child.RenderTransform.Value.M31 
+                    + delta.X, child.RenderTransform.Value.M32 + delta.Y);
         }
     }
 

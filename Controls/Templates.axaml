@@ -8,9 +8,6 @@
         <Setter Property="Template">
             <ControlTemplate>
                 <Border Background="{TemplateBinding Background}" Padding="6" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border.RenderTransform>
-                        <TranslateTransform Y="-25" />
-                    </Border.RenderTransform>
                     <Panel>
                         <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" />
 
