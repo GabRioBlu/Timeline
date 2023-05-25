@@ -1,0 +1,135 @@
+2023-05-15 12:15:56.632 -04:00 [INF] Starting log...
+2023-05-15 12:15:57.999 -04:00 [DBG] Finding descriptors for initialize
+2023-05-15 12:15:58.275 -04:00 [DBG] Queueing "Serial":initialize:0 request for processing
+2023-05-15 12:15:58.308 -04:00 [DBG] Starting: Processing request initialize 0
+2023-05-15 12:15:58.318 -04:00 [DBG] Starting: Routing Request (0) initialize
+2023-05-15 12:15:58.342 -04:00 [VRB] Converting params for Request (0) initialize to OmniSharp.Extensions.LanguageServer.Protocol.Models.InternalInitializeParams
+2023-05-15 12:15:58.345 -04:00 [VRB] Converting params for Notification initialize to OmniSharp.Extensions.LanguageServer.Protocol.Models.InternalInitializeParams
+2023-05-15 12:15:58.677 -04:00 [INF] GetRegistrationOptions method
+2023-05-15 12:15:58.793 -04:00 [VRB] Response value was OmniSharp.Extensions.LanguageServer.Protocol.Models.InitializeResult
+2023-05-15 12:15:58.797 -04:00 [DBG] Finished: Routing Request (0) initialize in 479ms
+2023-05-15 12:15:58.798 -04:00 [DBG] Finished: Processing request initialize 0 in 485ms
+2023-05-15 12:15:58.871 -04:00 [DBG] Finding descriptors for initialized
+2023-05-15 12:15:58.873 -04:00 [DBG] Queueing "Serial":initialized request for processing
+2023-05-15 12:15:58.878 -04:00 [DBG] Starting: Processing notification initialized
+2023-05-15 12:15:58.881 -04:00 [DBG] Starting: Routing Notification initialized
+2023-05-15 12:15:58.881 -04:00 [VRB] Converting params for Notification initialized to OmniSharp.Extensions.LanguageServer.Protocol.Models.InitializedParams
+2023-05-15 12:15:58.967 -04:00 [WRN] No ConfigurationItems have been defined, configuration won't surface any configuration from the client!
+2023-05-15 12:15:59.003 -04:00 [DBG] Finished: Routing Notification initialized in 122ms
+2023-05-15 12:15:59.004 -04:00 [DBG] Finished: Processing notification initialized in 125ms
+2023-05-15 12:15:59.005 -04:00 [DBG] Finding descriptors for textDocument/didOpen
+2023-05-15 12:15:59.020 -04:00 [VRB] Created attribute xml::file:///Users/macb/Desktop/Avalonia_Apps/Timeline/Views/MainWindow.axaml
+2023-05-15 12:15:59.023 -04:00 [VRB] Looking for handler for descriptors textDocument/didOpen
+2023-05-15 12:15:59.023 -04:00 [VRB] Checking handler textDocument/didOpen:Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler
+2023-05-15 12:15:59.023 -04:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.TextDocumentOpenRegistrationOptions
+2023-05-15 12:15:59.024 -04:00 [VRB] Document Selector [**/*.xaml], [**/*.axaml]
+2023-05-15 12:15:59.029 -04:00 [VRB] Handler Selected: Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler  via [**/*.xaml], [**/*.axaml] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcNotificationHandler`1[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2023-05-15 12:15:59.030 -04:00 [DBG] Queueing "Serial":textDocument/didOpen request for processing
+2023-05-15 12:15:59.030 -04:00 [DBG] Starting: Processing notification textDocument/didOpen
+2023-05-15 12:15:59.030 -04:00 [DBG] Starting: Routing Notification textDocument/didOpen
+2023-05-15 12:15:59.030 -04:00 [VRB] Converting params for Notification textDocument/didOpen to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams
+2023-05-15 12:15:59.034 -04:00 [DBG] Finished: Routing Notification textDocument/didOpen in 4ms
+2023-05-15 12:15:59.034 -04:00 [DBG] Finished: Processing notification textDocument/didOpen in 4ms
+2023-05-15 12:16:15.445 -04:00 [DBG] Finding descriptors for textDocument/didClose
+2023-05-15 12:16:15.469 -04:00 [VRB] Found attributes 1, ["xml::file:///Users/macb/Desktop/Avalonia_Apps/Timeline/Views/MainWindow.axaml"]
+2023-05-15 12:16:15.471 -04:00 [VRB] Looking for handler for descriptors textDocument/didClose
+2023-05-15 12:16:15.471 -04:00 [VRB] Checking handler textDocument/didClose:Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler
+2023-05-15 12:16:15.471 -04:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.TextDocumentCloseRegistrationOptions
+2023-05-15 12:16:15.472 -04:00 [VRB] Document Selector [**/*.xaml], [**/*.axaml]
+2023-05-15 12:16:15.473 -04:00 [VRB] Handler Selected: Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler  via [**/*.xaml], [**/*.axaml] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcNotificationHandler`1[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DidCloseTextDocumentParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2023-05-15 12:16:15.473 -04:00 [DBG] Swapping from "Serial" to "Parallel"
+2023-05-15 12:16:15.473 -04:00 [DBG] Completing existing request process type "Serial"
+2023-05-15 12:16:15.481 -04:00 [DBG] Queueing "Parallel":textDocument/didClose request for processing
+2023-05-15 12:16:15.482 -04:00 [DBG] Starting: Processing notification textDocument/didClose
+2023-05-15 12:16:15.482 -04:00 [DBG] Starting: Routing Notification textDocument/didClose
+2023-05-15 12:16:15.483 -04:00 [VRB] Converting params for Notification textDocument/didClose to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidCloseTextDocumentParams
+2023-05-15 12:16:15.492 -04:00 [DBG] Finished: Routing Notification textDocument/didClose in 9ms
+2023-05-15 12:16:15.492 -04:00 [DBG] Finished: Processing notification textDocument/didClose in 9ms
+2023-05-15 12:16:17.327 -04:00 [DBG] Finding descriptors for textDocument/didOpen
+2023-05-15 12:16:17.328 -04:00 [VRB] Created attribute xml::file:///Users/macb/Desktop/Avalonia_Apps/Timeline/Views/MainWindow.axaml
+2023-05-15 12:16:17.328 -04:00 [VRB] Looking for handler for descriptors textDocument/didOpen
+2023-05-15 12:16:17.328 -04:00 [VRB] Checking handler textDocument/didOpen:Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler
+2023-05-15 12:16:17.328 -04:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.TextDocumentOpenRegistrationOptions
+2023-05-15 12:16:17.328 -04:00 [VRB] Document Selector [**/*.xaml], [**/*.axaml]
+2023-05-15 12:16:17.329 -04:00 [VRB] Handler Selected: Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler  via [**/*.xaml], [**/*.axaml] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcNotificationHandler`1[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2023-05-15 12:16:17.329 -04:00 [DBG] Swapping from "Parallel" to "Serial"
+2023-05-15 12:16:17.329 -04:00 [DBG] Cancelling any outstanding requests (switch from parallel to serial)
+2023-05-15 12:16:17.332 -04:00 [DBG] Completing existing request process type "Parallel"
+2023-05-15 12:16:17.332 -04:00 [DBG] Queueing "Serial":textDocument/didOpen request for processing
+2023-05-15 12:16:17.332 -04:00 [DBG] Starting: Processing notification textDocument/didOpen
+2023-05-15 12:16:17.333 -04:00 [DBG] Starting: Routing Notification textDocument/didOpen
+2023-05-15 12:16:17.333 -04:00 [VRB] Converting params for Notification textDocument/didOpen to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams
+2023-05-15 12:16:17.354 -04:00 [DBG] Finished: Routing Notification textDocument/didOpen in 20ms
+2023-05-15 12:16:17.354 -04:00 [DBG] Finished: Processing notification textDocument/didOpen in 21ms
+2023-05-15 12:16:18.672 -04:00 [DBG] Finding descriptors for textDocument/didClose
+2023-05-15 12:16:18.672 -04:00 [VRB] Found attributes 1, ["xml::file:///Users/macb/Desktop/Avalonia_Apps/Timeline/Views/MainWindow.axaml"]
+2023-05-15 12:16:18.672 -04:00 [VRB] Looking for handler for descriptors textDocument/didClose
+2023-05-15 12:16:18.673 -04:00 [VRB] Checking handler textDocument/didClose:Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler
+2023-05-15 12:16:18.673 -04:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.TextDocumentCloseRegistrationOptions
+2023-05-15 12:16:18.673 -04:00 [VRB] Document Selector [**/*.xaml], [**/*.axaml]
+2023-05-15 12:16:18.673 -04:00 [VRB] Handler Selected: Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler  via [**/*.xaml], [**/*.axaml] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcNotificationHandler`1[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DidCloseTextDocumentParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2023-05-15 12:16:18.673 -04:00 [DBG] Swapping from "Serial" to "Parallel"
+2023-05-15 12:16:18.673 -04:00 [DBG] Completing existing request process type "Serial"
+2023-05-15 12:16:18.673 -04:00 [DBG] Queueing "Parallel":textDocument/didClose request for processing
+2023-05-15 12:16:18.673 -04:00 [DBG] Starting: Processing notification textDocument/didClose
+2023-05-15 12:16:18.673 -04:00 [DBG] Starting: Routing Notification textDocument/didClose
+2023-05-15 12:16:18.673 -04:00 [VRB] Converting params for Notification textDocument/didClose to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidCloseTextDocumentParams
+2023-05-15 12:16:18.678 -04:00 [DBG] Finished: Routing Notification textDocument/didClose in 4ms
+2023-05-15 12:16:18.678 -04:00 [DBG] Finished: Processing notification textDocument/didClose in 5ms
+2023-05-15 12:16:24.320 -04:00 [DBG] Finding descriptors for textDocument/didOpen
+2023-05-15 12:16:24.323 -04:00 [VRB] Created attribute xml::file:///Users/macb/Desktop/Avalonia_Apps/Timeline/Views/MainWindow.axaml
+2023-05-15 12:16:24.323 -04:00 [VRB] Looking for handler for descriptors textDocument/didOpen
+2023-05-15 12:16:24.323 -04:00 [VRB] Checking handler textDocument/didOpen:Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler
+2023-05-15 12:16:24.323 -04:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.TextDocumentOpenRegistrationOptions
+2023-05-15 12:16:24.323 -04:00 [VRB] Document Selector [**/*.xaml], [**/*.axaml]
+2023-05-15 12:16:24.323 -04:00 [VRB] Handler Selected: Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler  via [**/*.xaml], [**/*.axaml] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcNotificationHandler`1[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2023-05-15 12:16:24.323 -04:00 [DBG] Swapping from "Parallel" to "Serial"
+2023-05-15 12:16:24.324 -04:00 [DBG] Cancelling any outstanding requests (switch from parallel to serial)
+2023-05-15 12:16:24.324 -04:00 [DBG] Completing existing request process type "Parallel"
+2023-05-15 12:16:24.324 -04:00 [DBG] Queueing "Serial":textDocument/didOpen request for processing
+2023-05-15 12:16:24.326 -04:00 [DBG] Starting: Processing notification textDocument/didOpen
+2023-05-15 12:16:24.327 -04:00 [DBG] Starting: Routing Notification textDocument/didOpen
+2023-05-15 12:16:24.327 -04:00 [VRB] Converting params for Notification textDocument/didOpen to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams
+2023-05-15 12:16:24.378 -04:00 [DBG] Finished: Routing Notification textDocument/didOpen in 51ms
+2023-05-15 12:16:24.378 -04:00 [DBG] Finished: Processing notification textDocument/didOpen in 51ms
+2023-05-15 12:21:05.904 -04:00 [DBG] Finding descriptors for textDocument/didClose
+2023-05-15 12:21:05.919 -04:00 [VRB] Found attributes 1, ["xml::file:///Users/macb/Desktop/Avalonia_Apps/Timeline/Views/MainWindow.axaml"]
+2023-05-15 12:21:05.921 -04:00 [VRB] Looking for handler for descriptors textDocument/didClose
+2023-05-15 12:21:05.925 -04:00 [VRB] Checking handler textDocument/didClose:Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler
+2023-05-15 12:21:05.925 -04:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.TextDocumentCloseRegistrationOptions
+2023-05-15 12:21:05.926 -04:00 [VRB] Document Selector [**/*.xaml], [**/*.axaml]
+2023-05-15 12:21:05.948 -04:00 [VRB] Handler Selected: Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler  via [**/*.xaml], [**/*.axaml] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcNotificationHandler`1[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DidCloseTextDocumentParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2023-05-15 12:21:05.949 -04:00 [DBG] Swapping from "Serial" to "Parallel"
+2023-05-15 12:21:05.961 -04:00 [DBG] Completing existing request process type "Serial"
+2023-05-15 12:21:05.962 -04:00 [DBG] Queueing "Parallel":textDocument/didClose request for processing
+2023-05-15 12:21:05.963 -04:00 [DBG] Starting: Processing notification textDocument/didClose
+2023-05-15 12:21:05.963 -04:00 [DBG] Starting: Routing Notification textDocument/didClose
+2023-05-15 12:21:05.963 -04:00 [VRB] Converting params for Notification textDocument/didClose to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidCloseTextDocumentParams
+2023-05-15 12:21:05.987 -04:00 [DBG] Finished: Routing Notification textDocument/didClose in 23ms
+2023-05-15 12:21:05.988 -04:00 [DBG] Finished: Processing notification textDocument/didClose in 24ms
+2023-05-15 12:28:03.807 -04:00 [DBG] Finding descriptors for $/setTrace
+2023-05-15 12:28:03.887 -04:00 [DBG] Queueing "Parallel":$/setTrace request for processing
+2023-05-15 12:28:03.889 -04:00 [DBG] Starting: Processing notification $/setTrace
+2023-05-15 12:28:03.889 -04:00 [DBG] Starting: Routing Notification $/setTrace
+2023-05-15 12:28:03.889 -04:00 [VRB] Converting params for Notification $/setTrace to OmniSharp.Extensions.LanguageServer.Protocol.Models.SetTraceParams
+2023-05-15 12:28:03.967 -04:00 [DBG] Finished: Routing Notification $/setTrace in 76ms
+2023-05-15 12:28:03.968 -04:00 [DBG] Finished: Processing notification $/setTrace in 79ms
+2023-05-15 12:50:21.788 -04:00 [DBG] Finding descriptors for $/setTrace
+2023-05-15 12:50:21.812 -04:00 [DBG] Queueing "Parallel":$/setTrace request for processing
+2023-05-15 12:50:21.817 -04:00 [DBG] Starting: Processing notification $/setTrace
+2023-05-15 12:50:21.817 -04:00 [DBG] Starting: Routing Notification $/setTrace
+2023-05-15 12:50:21.819 -04:00 [VRB] Converting params for Notification $/setTrace to OmniSharp.Extensions.LanguageServer.Protocol.Models.SetTraceParams
+2023-05-15 12:50:21.886 -04:00 [DBG] Finished: Routing Notification $/setTrace in 68ms
+2023-05-15 12:50:21.886 -04:00 [DBG] Finished: Processing notification $/setTrace in 68ms
+2023-05-15 12:53:24.298 -04:00 [DBG] Finding descriptors for shutdown
+2023-05-15 12:53:24.303 -04:00 [DBG] Swapping from "Parallel" to "Serial"
+2023-05-15 12:53:24.307 -04:00 [DBG] Cancelling any outstanding requests (switch from parallel to serial)
+2023-05-15 12:53:24.307 -04:00 [DBG] Completing existing request process type "Parallel"
+2023-05-15 12:53:24.307 -04:00 [DBG] Queueing "Serial":shutdown:1 request for processing
+2023-05-15 12:53:24.312 -04:00 [DBG] Starting: Processing request shutdown 1
+2023-05-15 12:53:24.313 -04:00 [DBG] Starting: Routing Request (1) shutdown
+2023-05-15 12:53:24.336 -04:00 [VRB] Converting params for Request (1) shutdown to OmniSharp.Extensions.LanguageServer.Protocol.Models.ShutdownParams
+2023-05-15 12:53:24.336 -04:00 [VRB] Converting params for Notification shutdown to OmniSharp.Extensions.LanguageServer.Protocol.Models.ShutdownParams
+2023-05-15 12:53:24.532 -04:00 [VRB] Response value was null
+2023-05-15 12:53:24.534 -04:00 [DBG] Finished: Routing Request (1) shutdown in 220ms
+2023-05-15 12:53:24.534 -04:00 [DBG] Finished: Processing request shutdown 1 in 221ms

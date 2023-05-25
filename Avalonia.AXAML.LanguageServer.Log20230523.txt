@@ -1,0 +1,32 @@
+2023-05-23 09:06:24.231 -04:00 [INF] Starting log...
+2023-05-23 09:06:30.854 -04:00 [DBG] Finding descriptors for initialize
+2023-05-23 09:06:32.003 -04:00 [DBG] Queueing "Serial":initialize:0 request for processing
+2023-05-23 09:06:32.109 -04:00 [DBG] Starting: Processing request initialize 0
+2023-05-23 09:06:32.132 -04:00 [DBG] Starting: Routing Request (0) initialize
+2023-05-23 09:06:32.193 -04:00 [VRB] Converting params for Request (0) initialize to OmniSharp.Extensions.LanguageServer.Protocol.Models.InternalInitializeParams
+2023-05-23 09:06:32.205 -04:00 [VRB] Converting params for Notification initialize to OmniSharp.Extensions.LanguageServer.Protocol.Models.InternalInitializeParams
+2023-05-23 09:06:35.213 -04:00 [INF] GetRegistrationOptions method
+2023-05-23 09:06:35.619 -04:00 [VRB] Response value was OmniSharp.Extensions.LanguageServer.Protocol.Models.InitializeResult
+2023-05-23 09:06:35.625 -04:00 [DBG] Finished: Routing Request (0) initialize in 3492ms
+2023-05-23 09:06:35.626 -04:00 [DBG] Finished: Processing request initialize 0 in 3508ms
+2023-05-23 09:06:35.737 -04:00 [DBG] Finding descriptors for initialized
+2023-05-23 09:06:35.739 -04:00 [DBG] Queueing "Serial":initialized request for processing
+2023-05-23 09:06:35.747 -04:00 [DBG] Starting: Processing notification initialized
+2023-05-23 09:06:35.751 -04:00 [DBG] Starting: Routing Notification initialized
+2023-05-23 09:06:35.752 -04:00 [VRB] Converting params for Notification initialized to OmniSharp.Extensions.LanguageServer.Protocol.Models.InitializedParams
+2023-05-23 09:06:35.875 -04:00 [WRN] No ConfigurationItems have been defined, configuration won't surface any configuration from the client!
+2023-05-23 09:06:35.921 -04:00 [DBG] Finished: Routing Notification initialized in 169ms
+2023-05-23 09:06:35.921 -04:00 [DBG] Finished: Processing notification initialized in 173ms
+2023-05-23 09:06:35.924 -04:00 [DBG] Finding descriptors for textDocument/didOpen
+2023-05-23 09:06:35.942 -04:00 [VRB] Created attribute xml::file:///Users/macb/Desktop/Avalonia_Apps/Timeline/Views/MainWindow.axaml
+2023-05-23 09:06:35.945 -04:00 [VRB] Looking for handler for descriptors textDocument/didOpen
+2023-05-23 09:06:35.945 -04:00 [VRB] Checking handler textDocument/didOpen:Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler
+2023-05-23 09:06:35.946 -04:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.TextDocumentOpenRegistrationOptions
+2023-05-23 09:06:35.946 -04:00 [VRB] Document Selector [**/*.xaml], [**/*.axaml]
+2023-05-23 09:06:35.956 -04:00 [VRB] Handler Selected: Avalonia.AXAML.LanguageServer.Handlers.TextDocumentHandler  via [**/*.xaml], [**/*.axaml] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcNotificationHandler`1[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2023-05-23 09:06:35.957 -04:00 [DBG] Queueing "Serial":textDocument/didOpen request for processing
+2023-05-23 09:06:35.957 -04:00 [DBG] Starting: Processing notification textDocument/didOpen
+2023-05-23 09:06:35.957 -04:00 [DBG] Starting: Routing Notification textDocument/didOpen
+2023-05-23 09:06:35.958 -04:00 [VRB] Converting params for Notification textDocument/didOpen to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams
+2023-05-23 09:06:35.963 -04:00 [DBG] Finished: Routing Notification textDocument/didOpen in 5ms
+2023-05-23 09:06:35.963 -04:00 [DBG] Finished: Processing notification textDocument/didOpen in 5ms
