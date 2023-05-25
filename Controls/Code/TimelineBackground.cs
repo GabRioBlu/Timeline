@@ -7,7 +7,7 @@ namespace Timeline.Controls;
 
 public class TimelineBackground : Control
 {
-    // Properties
+    // Avalonia Properties
 
     /// <Summary>
     /// Background colour.
@@ -53,7 +53,7 @@ public class TimelineBackground : Control
         }
     }
 
-    // Fields
+    // Properties
 
     /// <Summary>
     /// Scroll offset.

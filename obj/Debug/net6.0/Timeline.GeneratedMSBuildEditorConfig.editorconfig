@@ -17,5 +17,8 @@ build_property.ProjectDir = /Users/macb/Desktop/Avalonia_Apps/Timeline/
 [/Users/macb/Desktop/Avalonia_Apps/Timeline/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/Users/macb/Desktop/Avalonia_Apps/Timeline/Controls/Templates.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/Users/macb/Desktop/Avalonia_Apps/Timeline/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

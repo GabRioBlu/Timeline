@@ -4,5 +4,6 @@
 
     <Application.Styles>
         <FluentTheme Mode="Light"/>
+        <StyleInclude Source="/Controls/Templates.axaml" />
     </Application.Styles>
 </Application>

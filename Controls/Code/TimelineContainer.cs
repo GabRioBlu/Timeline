@@ -3,12 +3,13 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
+using System.Collections.Specialized;
 
 namespace Timeline.Controls;
 
 public class TimelineContainer : Panel
 {
-    // Properties
+    // Avalonia Properties
 
     // Constructor
     public TimelineContainer()
@@ -38,40 +39,36 @@ public class TimelineContainer : Panel
     {
         base.OnPointerMoved(e);
 
+        // Don't pan if we aren't panning
         if (!mousePressed) return;
 
+        // Change in mouse pos
         Point delta = e.GetCurrentPoint(this).Position - previousPoint;
         pos += delta;
         previousPoint = e.GetCurrentPoint(this).Position;
 
+        // Get timeline bg control
         if (timelineBackground == null) timelineBackground = this.FindControl<TimelineBackground>("TimelineBackground");
         foreach (Control child in Children)
         {
+            // The bg control doesn't move - it only moves the rendered objects
             if (child == timelineBackground)
             {    
                 timelineBackground.pan = pos;
                 timelineBackground.InvalidateMeasure();
                 continue;
             }
-            child.RenderTransform = new TranslateTransform(pos.X, pos.Y);
+
+            child.RenderTransform = new TranslateTransform((child.RenderTransform != null ? child.RenderTransform.Value.M31 : 0) 
+                    + delta.X, (child.RenderTransform != null ? child.RenderTransform.Value.M32 : 0) + delta.Y);
         }
     }
 
     // Methods
 
-    // protected override void ArrangeCore(Rect finalRect)
-    // {
-    //     Console.WriteLine("ArrangeCore()");
-    //     base.ArrangeCore(finalRect);
-    // }
+    
 
-    // protected override Size ArrangeOverride(Size finalSize)
-    // {
-    //     Console.WriteLine("ArrangeOverride()");
-    //     return base.ArrangeOverride(finalSize);
-    // }
-
-    // Fields
+    // Properties
     bool mousePressed = false;
     Point pos = new Point();
     Point previousPoint = new Point();
