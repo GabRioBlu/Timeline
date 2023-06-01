@@ -3,7 +3,6 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
-using System.Collections.Specialized;
 
 namespace Timeline.Controls;
 
@@ -48,29 +47,71 @@ public class TimelineContainer : Panel
         previousPoint = e.GetCurrentPoint(this).Position;
 
         // Get timeline bg control
-        if (timelineBackground == null) timelineBackground = this.FindControl<TimelineBackground>("TimelineBackground");
-        foreach (Control child in Children)
+        foreach (var child in Children)
         {
-            // The bg control doesn't move - it only moves the rendered objects
-            if (child == timelineBackground)
-            {    
-                timelineBackground.pan = pos;
-                timelineBackground.InvalidateMeasure();
-                continue;
+            if (child is TimelineItem item)
+            {
+                child.RenderTransform = new TranslateTransform(item.Offset.X + pos.X, item.Offset.Y + pos.Y);
+            } 
+            else if (child is TimelineBackground bg)
+            {
+                // The bg control doesn't move - it only moves the rendered objects
+                bg.pan = pos;
+                bg.InvalidateMeasure();
             }
 
-            child.RenderTransform = new TranslateTransform(child.RenderTransform.Value.M31 
-                    + delta.X, child.RenderTransform.Value.M32 + delta.Y);
         }
     }
 
     // Methods
-
     
+    protected override Size ArrangeOverride(Size finalSize)
+    {
+        IControl? previousChild = null;
+        foreach (var child in Children)
+        {   
+            if (child is TimelineItem item)
+            {
+                item.RenderTransform = new TranslateTransform(item.Offset.X + pos.X, item.Offset.Y + pos.Y);
+                if (previousChild != null)
+                {
+                    TimelineItem prev = (TimelineItem)previousChild;
+
+                    for (int i = (int)(VisualChildren.IndexOf(child) + prev.Offset.Y/40); i < VisualChildren.IndexOf(child); i++)
+                    {
+                        TimelineItem prevItem = ((TimelineItem)VisualChildren[i]);
+
+                        Console.WriteLine("Start");
+                        Console.WriteLine(item.Time);
+                        Console.WriteLine(prevItem.Offset);
+                        Console.WriteLine(prevItem.Offset.Y == item.Offset.Y);
+                        Console.WriteLine(prevItem.Offset.X + VisualChildren[i].VisualChildren[0].Bounds.Width/2);
+                        Console.WriteLine(item.Offset.X - child.VisualChildren[0].Bounds.Width/2);
+                        Console.WriteLine(child.DesiredSize);
+                        Console.WriteLine("End");
+
+                        if (prevItem.Offset.Y == item.Offset.Y && prevItem.Offset.X + prevItem.DesiredSize.Width/2 > item.Offset.X - child.DesiredSize.Width/2)
+                        {
+                            item.Offset = new Point(item.Offset.X, item.Offset.Y - 40);
+                            item.RenderTransform = new TranslateTransform(item.Offset.X + pos.X, item.Offset.Y + pos.Y);
+                        }
+                    }
+                    
+                }
+                item.InvalidateArrange();
+                previousChild = child;
+                continue;
+            }
+
+            child.Arrange(new Rect(new Point(0, 0), finalSize));
+            child.InvalidateArrange();
+        }
+
+        return base.ArrangeOverride(finalSize);
+    }
 
     // Properties
     bool mousePressed = false;
     Point pos = new Point();
     Point previousPoint = new Point();
-    TimelineBackground? timelineBackground;
 }

@@ -42,7 +42,7 @@
             <ScrollViewer>
                 <tl:TimelineContainer Name="Timeline">
                     <tl:TimelineBackground Name="TimelineBackground" />
-                    <tl:TimelineItem Background="Orange" Title="pickled lettuce reehehe" />
+                    <tl:TimelineItem Background="Orange" Title="pickled lettuce reehehe" Time="0" />
                     
                 </tl:TimelineContainer>
             </ScrollViewer>

@@ -7,7 +7,7 @@
         <Setter Property="Background" Value="{TemplateBinding Background}" />
         <Setter Property="Template">
             <ControlTemplate>
-                <Border Background="{TemplateBinding Background}" Padding="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border Name="PART_Border" Background="{TemplateBinding Background}" Padding="6" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Panel>
                         <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" />
 

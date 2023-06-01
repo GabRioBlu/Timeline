@@ -11,14 +11,26 @@ public class TimelineItem : ContentControl
 
     public static readonly StyledProperty<string> TitleProperty = AvaloniaProperty.Register<TimelineItem, string>(nameof(Title));
 
-    public static readonly StyledProperty<DateTime> TimeProperty = AvaloniaProperty.Register<TimelineItem, DateTime>(nameof(Time), DateTime.Now);
+    public static readonly StyledProperty<int> TimeProperty = AvaloniaProperty.Register<TimelineItem, int>(nameof(Time), 1);
 
     // Constructor
 
     public TimelineItem()
     {
+        Setup();
+    }
+
+    public TimelineItem(int time)
+    {
+        Time = time;
+        Setup();
+    }
+
+    private void Setup()
+    {
         Background = Brushes.Orange;
-        this.RenderTransform = new TranslateTransform((Time.Year-2020)*50 + (Time.DayOfYear-1)*50/365, -40);
+        Offset = new Point(Time, -40);
+        //this.RenderTransform = new TranslateTransform((Time.Year-2020)*50 + (Time.DayOfYear-1)*50/355, -40);
     }
 
     // Properties
@@ -29,7 +41,7 @@ public class TimelineItem : ContentControl
         set { SetValue(TitleProperty, value); }
     }
 
-    public DateTime Time
+    public int Time
     {
         get { return GetValue(TimeProperty); }
         set { SetValue(TimeProperty, value); }

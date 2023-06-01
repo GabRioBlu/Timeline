@@ -2,11 +2,14 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Interactivity;
 using Timeline.Controls;
+using System;
 
 namespace Timeline.Views;
 
 public partial class MainWindow : Window
 {
+    private int offset = 0;
+
     public MainWindow()
     {
         InitializeComponent();
@@ -19,6 +22,7 @@ public partial class MainWindow : Window
 
     private void AddEvent(object sender, RoutedEventArgs e)
     {
-        this.FindControl<TimelineContainer>("Timeline").Children.Add(new TimelineItem() { Title = "Lettuce" });
+        offset++;
+        this.FindControl<TimelineContainer>("Timeline").Children.Add(new TimelineItem(offset*50) { Title = "Lettuce"});
     }
 }
