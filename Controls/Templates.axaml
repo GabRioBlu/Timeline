@@ -7,13 +7,14 @@
         <Setter Property="Background" Value="{TemplateBinding Background}" />
         <Setter Property="Template">
             <ControlTemplate>
-                <Border Name="PART_Border" Background="{TemplateBinding Background}" Padding="6" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Panel>
-                        <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" />
+                <Panel Name="PART_Panel" Background="{TemplateBinding Background}" HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" 
+                            Background="{TemplateBinding Background}" />
 
-                        <TextBlock Name="PART_Text" Text="{TemplateBinding Title}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                    </Panel>
-                </Border>
+                    <TextBlock Name="PART_Text" Text="{TemplateBinding Title}" Foreground="White" VerticalAlignment="Center"
+                            HorizontalAlignment="Center" Margin="5" />
+                </Panel>
             </ControlTemplate>
         </Setter>
     </Style>

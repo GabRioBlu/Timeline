@@ -4,12 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:tl="using:Timeline.Controls"
+        xmlns:views="using:Timeline.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Timeline.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Timeline"
-        Width="800" Height="450">
+        Width="800" Height="450" MinWidth="500" MinHeight="250">
 
     <NativeMenu.Menu>
         <NativeMenu>
@@ -35,6 +36,15 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
+    <Window.Styles>
+        <Style Selector="tl|TimelineItem.TimelineItem /template/ Panel > ContentPresenter">
+            <Setter Property="Background" Value="Orange" />
+        </Style>
+        <Style Selector="tl|TimelineItem:pointerover /template/ Panel > ContentPresenter">
+            <Setter Property="Background" Value="DarkOrange" />
+        </Style>
+    </Window.Styles>
+
     <Grid RowDefinitions="*,Auto">
         <!-- Main View -->
         <Panel Grid.Row="0">
@@ -42,7 +52,8 @@
             <ScrollViewer>
                 <tl:TimelineContainer Name="Timeline">
                     <tl:TimelineBackground Name="TimelineBackground" />
-                    <tl:TimelineItem Background="Orange" Title="pickled lettuce reehehe" Time="0" />
+                    <tl:TimelineItem Classes="TimelineItem" Title="pickled lettuce reehehe" Time="0" />
+                    <views:EditPanel Name="EditPanel" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="250" />
                     
                 </tl:TimelineContainer>
             </ScrollViewer>
@@ -50,15 +61,15 @@
             <!-- Zoom Controls -->
             <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
                 <!-- Horizontal Slider + Buttons -->
-                <StackPanel Orientation="Horizontal">
-                    <Slider Minimum="0.1" Maximum="5.0" Value="1" Width="200" />
+                <StackPanel Orientation="Horizontal" Margin="0,0,5,0">
+                    <Slider Minimum="0.1" Maximum="5.0" Value="1" Width="75" />
 
-                    <Rectangle Width="50" Height="50" Fill="#2034ba" Margin="5"/>
-                    <Rectangle Width="50" Height="50" Fill="#32a9c9" Margin="5"/>
+                    <Rectangle Width="30" Height="30" Fill="#2034ba" Margin="5"/>
+                    <Rectangle Width="30" Height="30" Fill="#32a9c9" Margin="5"/>
                 </StackPanel>
                 
                 <!-- Vertical Slider -->
-                <Slider Orientation="Vertical" HorizontalAlignment="Right" Margin="0,55,0,0" Minimum="0.1" Maximum="5.0" Value="1" Height="200" />
+                <Slider Orientation="Vertical" HorizontalAlignment="Right" Margin="0,15,0,0" Minimum="0.1" Maximum="5.0" Value="1" Height="75" />
             </StackPanel>
         </Panel>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">

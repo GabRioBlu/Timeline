@@ -3,6 +3,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
+using System.Linq;
 
 namespace Timeline.Controls;
 
@@ -77,18 +78,11 @@ public class TimelineContainer : Panel
                 {
                     TimelineItem prev = (TimelineItem)previousChild;
 
-                    for (int i = (int)(VisualChildren.IndexOf(child) + prev.Offset.Y/40); i < VisualChildren.IndexOf(child); i++)
+                    var start = VisualChildren.Skip(1).Take(VisualChildren.IndexOf(child) - 1).Last((c) => ((TimelineItem)c).Offset.Y == -40);
+
+                    for (int i = VisualChildren.IndexOf(start); i < VisualChildren.IndexOf(child); i++)
                     {
                         TimelineItem prevItem = ((TimelineItem)VisualChildren[i]);
-
-                        Console.WriteLine("Start");
-                        Console.WriteLine(item.Time);
-                        Console.WriteLine(prevItem.Offset);
-                        Console.WriteLine(prevItem.Offset.Y == item.Offset.Y);
-                        Console.WriteLine(prevItem.Offset.X + VisualChildren[i].VisualChildren[0].Bounds.Width/2);
-                        Console.WriteLine(item.Offset.X - child.VisualChildren[0].Bounds.Width/2);
-                        Console.WriteLine(child.DesiredSize);
-                        Console.WriteLine("End");
 
                         if (prevItem.Offset.Y == item.Offset.Y && prevItem.Offset.X + prevItem.DesiredSize.Width/2 > item.Offset.X - child.DesiredSize.Width/2)
                         {

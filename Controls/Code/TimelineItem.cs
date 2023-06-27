@@ -1,7 +1,7 @@
 using Avalonia.Controls;
 using Avalonia;
 using Avalonia.Media;
-using System;
+using Avalonia.Input;
 
 namespace Timeline.Controls;
 
@@ -30,7 +30,18 @@ public class TimelineItem : ContentControl
     {
         Background = Brushes.Orange;
         Offset = new Point(Time, -40);
-        //this.RenderTransform = new TranslateTransform((Time.Year-2020)*50 + (Time.DayOfYear-1)*50/355, -40);
+
+        AffectsMeasure<TimelineItem>(TitleProperty);
+        AffectsMeasure<TimelineItem>(TimeProperty);
+    }
+
+    // Methods
+
+    protected override void OnPointerPressed(PointerPressedEventArgs e)
+    {
+        
+
+        base.OnPointerPressed(e);
     }
 
     // Properties
